@@ -55,11 +55,11 @@ body {
 
 /* ****************** Estilos Generales ****************** */
 h1,
-h2 {
+h2,
+h3 {
   font-size: 30px;
   text-indent: 30px;
   color: var(--color-white);
-  text-shadow: 5px 5px var(--color-shadows);
 }
 
 video {
@@ -69,6 +69,10 @@ video {
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+.sombras__textos{
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.7);
 }
 
 .header__principal {
@@ -176,6 +180,15 @@ footer {
 
 /* Pagina de Grupos******************************************************************************************************************** */
 
+.container_grupos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
 .titulo__grupos h2 {
   position: relative;
   bottom: 15px;
@@ -227,11 +240,18 @@ footer {
   text-shadow: 2px 2px black;
 }
 
-/* Pagina de Grupo A******************************************************************************************************************** */
+.fase__final img{
+  width: 100%;
+}
 
- 
+/*Grupos ******************************************************************************************************************** */
+
+.sombra {
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
+}
+
 .container__grupos {
-  background:url(../img/banner.jpg);
+  background: url("../img/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -256,48 +276,182 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   text-align: center;
   gap: 3rem;
+  position: relative;
 }
 
 .jugador {
-  height: 700px;
+  height: 600px;
+}
+
+.container__nombre {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 250px;
 }
 
 .nombre {
   font-size: 80px;
-  text-shadow: 2px 2px black;
 }
 
 .escudo {
   height: 300px;
-  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
 }
 
+.container__encuentros{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 3rem;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  backdrop-filter: blur(30px);
+}
+
+.encuentro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+/* Pagina de Grupo A ******************************************************************************************************************** */
+
 #qatar {
-  background: url("../img/banderas/qatar.jpg");
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/qatar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #ecuador {
-  background: url("../img/banderas/ecuador.png");
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/ecuador.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #senegal {
-  background: url("../img/banderas/senegal.png");
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/senegal.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 #paises__bajos {
-  background: url("../img/banderas/paises\ bajos.png");
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/paises\ bajos.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#inglaterra{
-  background: url("../img/banderas/inglaterra.png");
+/* Pagina de Grupo B ******************************************************************************************************************** */
+#inglaterra {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/inglaterra.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#iran{
-  background: url("../img/banderas/iran.png");
+#iran {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/iran.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#estados__unidos {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/estados\ unidos.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#gales {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/gales.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Pagina de Grupo C ******************************************************************************************************************** */
+#argentina {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/argentina.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#arabia__saudita {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/arabia\ saudita.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#mexico {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/mexico.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#polonia {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/polonia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Pagina de Grupo D ******************************************************************************************************************** */
+#francia {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/francia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#australia {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/australia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#dinamarca {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/dinamarca.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#tunez {
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.1)),
+    url("../img/banderas/tunez.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
