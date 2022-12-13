@@ -38,9 +38,6 @@
   --color-light: rgb(182, 182, 182);
   --color-shadows: rgba(0, 0, 0, 0.1);
 
-  /* Transiciones */
-  --transition: all 400ms ease;
-
   /* Tamaños de los contenedores estandar */
   --container-width-lg: 75%;
   --container-width-md: 86%;
@@ -51,6 +48,10 @@ body {
   font-family: Qatar2022Bold;
   background: var(--color-bg);
   color: var(--color-white);
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 /* ****************** Estilos Generales ****************** */
@@ -150,6 +151,9 @@ video {
 
 .selection:hover {
   background-color: var(--color-primary);
+  transform: scale(1.2);
+  transition: all 1s;
+  cursor: pointer;
 }
 
 .selection img {
@@ -179,14 +183,86 @@ footer {
 }
 
 /* Pagina de Grupos******************************************************************************************************************** */
+.container__carrusel{
+ height: 300px
+}
 
-.container_grupos{
+.carrusel {
+  -webkit-perspective: 250px;
+  -moz-perspective: 250px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: wrap;
+  top:30%;
+  left: 45%;
+  border-radius: 8px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
+  text-align: center;
+  -webkit-animation-name: efectoCarrusel;
+  -moz-animation-name: efectoCarrusel;
+  -webkit-animation-duration: 32s;
+  -moz-animation-duration: 32s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+}
+
+.tarjeta img{
+  width: 200px;
+  border-radius: 8px;
+}
+
+.tarjeta:hover {
+  border: solid var(--color-white) 2px;
+  box-shadow: 0px 0px 3px var(--color-white);
+}
+
+.tarjeta.cc__1 {
+  -webkit-animation-delay: -32s;
+  -moz-animation-delay: -32s;
+}
+
+.tarjeta.cc__2 {
+  -webkit-animation-delay: -28s;
+  -moz-animation-delay: -28s;
+}
+
+.tarjeta.cc__3 {
+  -webkit-animation-delay: -24s;
+  -moz-animation-delay: -24s;
+}
+
+.tarjeta.cc__4 {
+  -webkit-animation-delay: -20s;
+  -moz-animation-delay: -20s;
+}
+
+.tarjeta.cc__5 {
+  -webkit-animation-delay: -16s;
+  -moz-animation-delay: -16s;
+}
+
+.tarjeta.cc__6 {
+  -webkit-animation-delay: -12s;
+  -moz-animation-delay: -12s;
+}
+
+.tarjeta.cc__7 {
+  -webkit-animation-delay: -8s;
+  -moz-animation-delay: -8s;
+}
+
+.tarjeta.cc__8 {
+  -webkit-animation-delay: -4s;
+  -moz-animation-delay: -4s;
 }
 
 .titulo__grupos h2 {
@@ -199,6 +275,16 @@ footer {
   height: 50px;
   margin-left: 10px;
 }
+
+.container_grupos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 
 .container__grupo h3 {
   font-size: 20px;
@@ -227,9 +313,9 @@ footer {
   box-shadow: inset 2px 2px 10px 2px goldenrod;
 }
 
-.container__grupo table:hover {
+/* .container__grupo table:hover {
   background-color: var(--color-primary-variant);
-}
+} */
 
 .container__grupo table tr td {
   color: goldenrod;
@@ -245,6 +331,9 @@ footer {
 }
 
 /*Grupos ******************************************************************************************************************** */
+.animacionInicio{
+  animation: animacionInicio 5s 1;
+}
 
 .sombra {
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.7));
@@ -455,3 +544,55 @@ footer {
   background-size: cover;
   background-position: center;
 }
+
+
+/* ***************************Animaciones********************************************** */
+@keyframes animacionInicio{
+  from{
+      opacity: 0%;
+      transform: translateX(-100px);
+  }
+  to{
+      opacity: 100%;
+      transform: translateX(0);
+  }
+}
+
+@-webkit-keyframes efectoCarrusel {
+  from {
+      -webkit-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+      -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+      z-index: 10;
+      opacity: 1
+  }
+
+  50% {
+      z-index: -10;
+  }
+
+  to {
+      -webkit-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+      -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+      z-index: 10;
+      opacity: 1
+  }
+}
+
+@-moz-keyframes efectoCarrusel {
+  from {
+      -moz-transform: rotateY(360deg) translateZ(130px) rotateY(-360deg);
+      z-index: 10;
+      opacity: 1
+  }
+
+  50% {
+      z-index: -10;
+  }
+
+  to {
+      -moz-transform: rotateY(0deg) translateZ(130px) rotateY(0deg);
+      z-index: 10;
+      opacity: 1
+  }
+}
+/* ************************************************************************************ */
