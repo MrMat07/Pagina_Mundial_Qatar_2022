@@ -337,8 +337,13 @@ footer {
   text-shadow: 2px 2px black;
 }
 
+.fase__final{
+ display: flex;
+ justify-content: center;
+}
+
 .fase__final img {
-  width: 100%;
+  width: 70%;
 }
 
 /*Grupos ******************************************************************************************************************** */
